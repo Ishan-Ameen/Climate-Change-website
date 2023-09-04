@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Climate Change</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/Favicon.png" type="image/png">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div id="SearchResult">
+        <div>
+            <h3>Search result of "<span id="input"></span>". Click on it to go to the page.</h3>
+            <h3 id="Result"></h3>
+            <button class="btn" id="SearchButton" onclick="Close()">Go Back</button>
+        </div>
+    </div>
+    <input type="checkbox" id="input_toggle">
+    <label for="input_toggle" id="toggler"><img src="Images/Navigator.png" draggable="false" alt="Navigation Bar Toggler"></label>
+    <nav>
+        <div id="brand">
+            <img src="Images/Logo.gif" id="navbar-img" draggable="false" alt="Earth Logo Gif">
+            <a id="header" href="index.html">Home</a>
+        </div>
+        <!-- DT stands for Dropdown Toggler -->
+        <input type="checkbox" id="Input_DT">
+        <label for="Input_DT" id="DT">More About Climate Change <span id="triangle"></span></label>
+        <div id="dropdown">
+            <a href="How_it_Happens.html" class="dropdown_item">How it Happens?</a>
+            <a href="Effects.html" class="dropdown_item">Effects</a>
+            <a href="Greenhouse_Effect.html" class="dropdown_item">Greenhouse Effect</a>
+            <a href="Global_Warming.html" class="dropdown_item">Global Warming</a>
+        </div>
+        <a href="Solutions.html">Solutions for Climate Change</a>
+        <a href="About_Us.html">About Us</a>
+        <form>
+            <input type="search" placeholder="Search Here" id="searchbar">
+            <button class="btn" onclick="search(event)">Search</button>
+        </form>
+    </nav>
+    <div id="slider">
+        <div id="slides">
+            <!-- Buttons -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4"> <!-- All names should be same so html knows only one of these should be selected. -->
+            <!-- Slide Images -->
+            <div class="slide first"><img src="Images/Banner/Banner1.png" alt="Climate Change" id="image" draggable="false"></div>
+            <div class="slide"><img src="Images/Banner/Banner2.png" alt="Earth on a hand" draggable="false"></div>
+            <div class="slide"><img src="Images/Banner/Banner3.png" alt="Global Warming" draggable="false"></div>
+            <div class="slide"><img src="Images/Banner/Banner4.png" alt="Posters on Climate Change" draggable="false"></div>
+            <!-- Automatic Navigation -->
+            <div class="navigation-auto">
+                <div id="auto-btn1"></div>
+                <div id="auto-btn2"></div>
+                <div id="auto-btn3"></div>
+                <div id="auto-btn4"></div>
+            </div>
+            <!-- Manual Navigation -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn" onclick="reset_timer()"></label>
+                <label for="radio2" class="manual-btn" onclick="reset_timer()"></label>
+                <label for="radio3" class="manual-btn" onclick="reset_timer()"></label>
+                <label for="radio4" class="manual-btn" onclick="reset_timer()"></label>
+            </div>
+            <!-- Arrow Navigation -->
+            <div class="arrows">
+                <button class="Left_Arrow" onclick="Slide(-1)"></button>
+                <button class="Left_Arrow" onclick="Slide(-1)"></button>
+                <button class="Right_Arrow" onclick="Slide(1)"></button>
+                <button class="Right_Arrow" onclick="Slide(1)"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content">
+        <h1><span>Introduction</span></h1>
+        <p>
+            Climate change refers to long-term alterations in temperature patterns, precipitation levels, wind patterns,
+            and other aspects of Earth's climate system. It is primarily caused by human activities, particularly the
+            burning of fossil fuels such as coal, oil, and gas, which release significant amounts of greenhouse gases
+            into the atmosphere.
+            These greenhouse gases, including carbon dioxide CO<sub>2</sub>, methane CH<sub>4</sub>, and nitrous oxide 
+            N<sub>2</sub>O, trap heat from the sun and cause the Earth's surface to warm.
+            <br><br>
+            The consequences of climate change are wide-ranging and include rising global temperatures, melting ice caps
+            and glaciers, sea-level rise, extreme weather events (such as hurricanes, droughts, and heatwaves), changes
+            in ecosystems, and threats to biodiversity.
+            Climate change poses significant risks to human health, agriculture, water resources, economies, and overall
+            societal well-being.
+            <br><br>
+            Addressing climate change requires collective action at the global level. It involves reducing greenhouse
+            gas emissions, transitioning to renewable and sustainable energy sources, improving energy efficiency,
+            adopting climate-resilient practices, and promoting sustainable development.
+            Mitigation efforts aim to limit the magnitude of future climate change, while adaptation measures help
+            societies cope with the changes that are already occurring.
+            <br><br>
+            By raising awareness about climate change and taking action to mitigate its impacts, we can strive to create
+            a sustainable and resilient future for our planet and future generations.
+        </p>
+
+        <img src="Images/Content/Tree in Climate Change.webp" alt="Tree in Climate Change">
+    </div>
+
+    <footer>&copy; Copyright 2023 - Climate Change - Created by Devesh, Ishan and Shrivardhan</footer>
+
+</body>
+</html>

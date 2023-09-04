@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Climate Change</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/Favicon.png" type="image/png">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div id="SearchResult">
+        <div>
+            <h3>Search result of "<span id="input"></span>". Click on it to go to the page.</h3>
+            <h3 id="Result"></h3>
+            <button class="btn" id="SearchButton" onclick="Close()">Go Back</button>
+        </div>
+    </div>
+    <input type="checkbox" id="input_toggle">
+    <label for="input_toggle" id="toggler"><img src="Images/Navigator.png" draggable="false" alt="Navigation Bar Toggler"></label>
+    <nav>
+        <div id="brand">
+            <img src="Images/Logo.gif" id="navbar-img" draggable="false" alt="Earth Logo Gif">
+            <a id="header" href="index.html">Home</a>
+        </div>
+        <!-- DT stands for Dropdown Toggler -->
+        <input type="checkbox" id="Input_DT">
+        <label for="Input_DT" id="DT">More About Climate Change <span id="triangle"></span></label>
+        <div id="dropdown">
+            <a href="How_it_Happens.html" class="dropdown_item">How it Happens?</a>
+            <a href="Effects.html" class="dropdown_item">Effects</a>
+            <a href="Greenhouse_Effect.html" class="dropdown_item">Greenhouse Effect</a>
+            <a href="Global_Warming.html" class="dropdown_item">Global Warming</a>
+        </div>
+        <a href="Solutions.html">Solutions for Climate Change</a>
+        <a href="About_Us.html">About Us</a>
+        <form>
+            <input type="search" placeholder="Search Here" id="searchbar">
+            <button class="btn" onclick="search(event)">Search</button>
+        </form>
+    </nav>
+    <div id="slider">
+        <div id="slides">
+            <!-- Buttons -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!-- Slide Images -->
+            <div class="slide first"><img src="Images/Banner/Banner1.png" alt="Climate Change" id="image" draggable="false"></div>
+            <div class="slide"><img src="Images/Banner/Banner2.png" alt="Earth on a hand" draggable="false"></div>
+            <div class="slide"><img src="Images/Banner/Banner3.png" alt="Global Warming" draggable="false"></div>
+            <div class="slide"><img src="Images/Banner/Banner4.png" alt="Posters on Climate Change" draggable="false"></div>
+            <!-- Automatic Navigation -->
+            <div class="navigation-auto">
+                <div id="auto-btn1"></div>
+                <div id="auto-btn2"></div>
+                <div id="auto-btn3"></div>
+                <div id="auto-btn4"></div>
+            </div>
+            <!-- Manual Navigation -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn" onclick="reset_timer()"></label>
+                <label for="radio2" class="manual-btn" onclick="reset_timer()"></label>
+                <label for="radio3" class="manual-btn" onclick="reset_timer()"></label>
+                <label for="radio4" class="manual-btn" onclick="reset_timer()"></label>
+            </div>
+            <!-- Arrow Navigation -->
+            <div class="arrows">
+                <button class="Left_Arrow" onclick="Slide(-1)"></button>
+                <button class="Left_Arrow" onclick="Slide(-1)"></button>
+                <button class="Right_Arrow" onclick="Slide(1)"></button>
+                <button class="Right_Arrow" onclick="Slide(1)"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="content">
+        <h1><span>The Greenhouse Effect</span></h1>
+        <p>
+            The greenhouse effect is a good thing. It warms the planet to temperatures that keep life on earth, well, livable. Without it, the world would be more like Mars: a frozen, uninhabitable place. The problem is, the voracious burning of fossil fuels for energy is artificially amping up the natural greenhouse effect. The result? An increase in global warming that is altering the planet’s climate system. Here’s a look at what the greenhouse effect is, what causes it, and how we can temper its contributions to our changing climate.
+            <br><br>
+            The greenhouse effect is the natural warming of the earth that results when gases in the atmosphere trap heat from the sun that would otherwise escape into space. The process was identified by scientists in the 1800s.
+        </p>
+        <img src="https://climate.nasa.gov/internal_resources/2584/greenhouse-effect-revised-1200x630.jpg" alt="How the Greenhouse Effect happens?">
+        <p>
+            Sunlight, with the natural greenhouse effect process, makes the earth habitable. While around 30 percent of the solar energy—the light and heat from the sun—that reaches our world is reflected back into space, the rest is either absorbed by the atmosphere or the earth’s surface. This process, which is constantly happening around the globe, warms the planet. This heat is then radiated back up in the form of invisible infrared radiation. While some of this infrared light continues on into space, the vast majority gets absorbed by atmospheric gases, known as greenhouse gases, causing further warming.
+            <br><br>
+            But higher concentrations of greenhouse gases, and carbon dioxide (CO2) in particular, are causing extra heat to be trapped and average global temperatures to rise. For most of the past 800,000 years—much longer than human civilization has existed—the concentration of CO2 in our atmosphere was roughly between 200 and 280 parts per million. (In other words, there were 200 to 280 molecules of the gases per million molecules of air.) But in the past century, that concentration has jumped. In 2013, driven up largely by the burning of fossil fuels and deforestation, CO2 in the earth’s atmosphere surpassed 400 parts per million—a concentration not seen on the planet for millions of years. As of 2023, it has reached more than 420 parts per million, which is 50 percent higher than preindustrial levels. This is called <a href="Global_Warming.html">global warming</a>.
+        </p>
+        <img src="https://static.vecteezy.com/system/resources/previews/008/414/925/original/global-warming-cartoon-style-illustration-with-planet-earth-in-a-melting-or-burning-state-and-image-sun-to-prevent-damage-to-nature-and-climate-change-vector.jpg" alt="Global Warming">
+
+    </div>
+
+    <footer>&copy; Copyright 2023 - Climate Change - Created by Devesh, Ishan and Shrivardhan</footer>
+
+</body>
+</html>

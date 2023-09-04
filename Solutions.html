@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Climate Change</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/Favicon.png" type="image/png">
+    <script defer src="script.js"></script>
+    <style>li{margin-bottom: 30px;}</style>
+</head>
+
+<body>
+    <div id="SearchResult">
+        <div>
+            <h3>Search result of "<span id="input"></span>". Click on it to go to the page.</h3>
+            <h3 id="Result"></h3>
+            <button class="btn" id="SearchButton" onclick="Close()">Go Back</button>
+        </div>
+    </div>
+    <input type="checkbox" id="input_toggle">
+    <label for="input_toggle" id="toggler"><img src="Images/Navigator.png" draggable="false" alt="Navigation Bar Toggler"></label>
+    <nav>
+        <div id="brand">
+            <img src="Images/Logo.gif" id="navbar-img" draggable="false" alt="Earth Logo Gif">
+            <a id="header" href="index.html">Home</a>
+        </div>
+        <!-- DT stands for Dropdown Toggler -->
+        <input type="checkbox" id="Input_DT">
+        <label for="Input_DT" id="DT">More About Climate Change <span id="triangle"></span></label>
+        <div id="dropdown">
+            <a href="How_it_Happens.html" class="dropdown_item">How it Happens?</a>
+            <a href="Effects.html" class="dropdown_item">Effects</a>
+            <a href="Greenhouse_Effect.html" class="dropdown_item">Greenhouse Effect</a>
+            <a href="Global_Warming.html" class="dropdown_item">Global Warming</a>
+        </div>
+        <a href="Solutions.html">Solutions for Climate Change</a>
+        <a href="About_Us.html">About Us</a>
+        <form>
+            <input type="search" placeholder="Search Here" id="searchbar">
+            <button class="btn" onclick="search(event)">Search</button>
+        </form>
+    </nav>
+    <div id="slider">
+        <div id="slides">
+            <!-- Buttons -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!-- Slide Images -->
+            <div class="slide first"><img src="Images/Banner/Banner1.png" alt="Climate Change" id="image" draggable="false"></div>
+            <div class="slide"><img src="Images/Banner/Banner2.png" alt="Earth on a hand" draggable="false"></div>
+            <div class="slide"><img src="Images/Banner/Banner3.png" alt="Global Warming" draggable="false"></div>
+            <div class="slide"><img src="Images/Banner/Banner4.png" alt="Posters on Climate Change" draggable="false"></div>
+            <!-- Automatic Navigation -->
+            <div class="navigation-auto">
+                <div id="auto-btn1"></div>
+                <div id="auto-btn2"></div>
+                <div id="auto-btn3"></div>
+                <div id="auto-btn4"></div>
+            </div>
+            <!-- Manual Navigation -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn" onclick="reset_timer()"></label>
+                <label for="radio2" class="manual-btn" onclick="reset_timer()"></label>
+                <label for="radio3" class="manual-btn" onclick="reset_timer()"></label>
+                <label for="radio4" class="manual-btn" onclick="reset_timer()"></label>
+            </div>
+            <!-- Arrow Navigation -->
+            <div class="arrows">
+                <button class="Left_Arrow" onclick="Slide(-1)"></button>
+                <button class="Left_Arrow" onclick="Slide(-1)"></button>
+                <button class="Right_Arrow" onclick="Slide(1)"></button>
+                <button class="Right_Arrow" onclick="Slide(1)"></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1><span>Solutions for Climate Change</span></h1>
+        <p>             
+            Everyone can help limit climate change. From the way we travel, to the electricity and water we use, we can make a difference. Start with these seven actions to help tackle the climate crisis:
+        </p>
+        <ol>
+            <li>
+                Transition to Renewable Energy: Shifting our primary energy sources from fossil fuels, such as coal and oil, to clean and renewable sources like solar, wind, hydro, and geothermal power is essential. This helps generate energy without producing greenhouse gas emissions, reducing the carbon footprint associated with electricity production and decreasing our reliance on fossil fuels—a major contributor to climate change.
+                <img src="Images/Content/Renewable Energy.jpg" alt="Renewable Energy">
+            </li>
+            
+            <li>
+                Reforestation and Afforestation: Planting and restoring forests play a crucial role in absorbing carbon dioxide from the atmosphere. Trees capture and store carbon through photosynthesis, offsetting emissions from other sources. Increasing forest cover also enhances oxygen production, contributing to a healthier environment.
+                <img src="Images/Content/Plant Saplings.jpg" alt="Plant Saplings">
+            </li>
+
+            <li>
+                Sustainable Agriculture: Adopting sustainable farming practices involves reducing greenhouse gas emissions, improving soil health, and minimizing deforestation for agricultural purposes. These practices include efficient water and resource management, organic farming methods, and crop rotation, all of which collectively contribute to a healthier environment while ensuring long-term food security.
+                <img src="Images/Content/Sustainable Agriculture.jpg" alt="Sustainable Agriculture">
+            </li>
+
+            <li>
+                Transportation Solutions: Promoting public transportation, electric vehicles, and alternative transportation modes like running, jogging, walking, and cycling helps reduce pollution and benefits the environment. These changes can make our transportation cleaner and more environmentally friendly.
+                <img src="Images/Content/Ride Bicycles.jpg" alt="Ride Bicycles">
+            </li>
+
+            <li>
+                Circular Economy: Instead of throwing things away, we can make items last longer by reducing, reusing, and recycling (The 3 R's). These actions help reduce waste and emissions. When we're done with something, recycling or repurposing it conserves resources and minimizes environmental impact.
+                <img src="Images/Content/The 3 Rs.webp" alt="The 3 R's">
+            </li>
+
+            <li>
+                Climate Education: Learning about climate change and its effects on the Earth is crucial. It involves understanding how our actions, like using energy or cutting down trees, can harm the planet. When we are better informed, we can make choices to protect our environment and combat climate change.
+                <img src="Images/Content/Climate Education.webp" alt="Climate Education">
+            </li>
+
+            <li>
+                Reducing Deforestation: This means cutting down fewer trees in forests. Trees are important because they help clean the air and provide homes for animals. By reducing deforestation and planting more trees, we can maintain healthy forests and protect the environment.
+                <img src="Images/Content/Deforestation.jpg" alt="Deforestation">
+            </li>
+        </ol>
+    </div>
+
+    <footer>&copy; Copyright 2023 - Climate Change - Created by Devesh, Ishan and Shrivardhan</footer>
+
+</body>
+</html>
